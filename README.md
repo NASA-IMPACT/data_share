@@ -5,13 +5,12 @@
 ## Phenomena
 
 ### High Latitude Dust
-Dust  aerosols  in  the  atmosphere  are  known  to  modulate  the  environmental conditions and climate system through direct and indirect effects between theland–atmosphere–ocean system. HLD as ”particles that are deflated from a surface and travel by suspension in the atmosphere”, having sizes that spawn from tenths of μm to larger aggregates.In addition,  dust events are considered high latitude when they are ≥ 50◦N and ≥40◦S. HLD  tends  to  occur  under  specificconditions  having  a  more  seasonal  dependence  and  can  persist  from  hours  toa few days.
+Dust  aerosols  in  the  atmosphere  are  known  to  modulate environmental conditions and the climate system through direct and indirect effects between the land–atmosphere–ocean system. High latitude dust (HLD) is defined as ”particles that are lifted from a surface and travel by suspension in the atmosphere”. Typically, these dust particles are of the range of tenths of μm or larger in size. In addition,  dust events are considered high latitude when they are ≥ 50◦N and ≥ 40◦S. HLD  tends  to  occur  in  specific conditions and is seasonally dependent. HLD events can last anywhere from several hours to several days.
 
 ![High Latitude Dust Sample](/examples/hld_sample.jpg)
 
 Data Description:
-1. Each event in a folder.
-2. Folder Structure:
+1. Labeled events are stored in a folder with the following structure:
   ```
    high-latitude-dust_<id>:
      |> high-latitude-dust_<id>.dbf
@@ -19,13 +18,13 @@ Data Description:
      |> high-latitude-dust_<id>.shp
      |> high-latitude-dust_<id>.shx
   ```
-3. Images to be downloaded using GIBS. (https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&layers=MODIS_Aqua_CorrectedReflectance_TrueColor&version=1.3.0&crs=EPSG:4326&transparent=false&width={}&height={}&bbox={}&format=image/tiff&time={})
-3.a. Variables required:
+2. Images to be downloaded using GIBS. (https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&layers=MODIS_Aqua_CorrectedReflectance_TrueColor&version=1.3.0&crs=EPSG:4326&transparent=false&width={}&height={}&bbox={}&format=image/tiff&time={})
+2.a. Variables required:
      > width = width of the image
      > height = height of the image
      > bbox = [left_latitude, left_longitude, right_latitude, right_longitude]
 
-*Note: Use the following for width, height calculation and url generation.*
+*Note: Use the following for approximate width, height calculation and url generation.*
 
 ```
 URL = "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&layers=MODIS_Aqua_CorrectedReflectance_TrueColor&version=1.3.0&crs=EPSG:4326&transparent=false&width={}&height={}&bbox={}&format=image/tiff&time={}"
@@ -50,11 +49,11 @@ def modis_url(time, extent, resolution):
 
 You can download the files from: `s3://hls-datashare`. You will need an AWS account to download the data.
 
-### Cloud Street
+### Cloud Streets
 
 #### Background
 
-The organization of cumulus clouds into elongated rows oriented parallel to the mean boundary layer flow is a phenomenon often referred to as cloud streets. Organized cumulus cloud streets are the visual manifestation of underlying boundary layer roll circulations commonly referred to as horizontal convective rolls. Formation of boundary layer rolls is commonly attributed to  two instability mechanisms – thermal and dynamic instability.
+The organization of cumulus clouds into elongated rows oriented parallel to the mean boundary layer flow is a phenomenon often referred to as cloud streets. Organized cumulus cloud streets are the visual manifestation of underlying boundary layer roll circulations commonly referred to as horizontal convective rolls. Formation of boundary layer rolls is attributed to  two instability mechanisms – thermal and dynamic instability.
 
 Direct impacts of cloud streets are fairly minimal as they typically do not precipitate or have meaningful environmental impacts aside from surface radiation.  The effects of cloud streets are most notable in the presence of sea breeze circulations as intersections of roll circulations and sea breeze circulations are known to force convective initiation.  Coastal convection is a primary source of precipitation in these settings and can grow upscale to propagating mesoscale convective systems that modulate the regional and even global precipitation budgets.
 
