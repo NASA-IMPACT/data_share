@@ -65,9 +65,9 @@ Direct impacts of cloud streets are fairly minimal as they typically do not prec
 1. Folder Structure:
   ```
    Cloud Streets/
-       |> Yes
+       |> yes
           |> <images>
-       |> No
+       |> no
           |> <images>
   ```
 2. Data type: images, jpg
