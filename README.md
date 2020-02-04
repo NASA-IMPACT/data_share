@@ -12,11 +12,13 @@ Dust  aerosols  in  the  atmosphere  are  known  to  modulate  the  environmenta
 Data Description:
 1. Each event in a folder.
 2. Folder Structure:
+  ```
    high-latitude-dust_<id>:
      |> high-latitude-dust_<id>.dbf
      |> high-latitude-dust_<id>.prj
      |> high-latitude-dust_<id>.shp
      |> high-latitude-dust_<id>.shx
+  ```
 3. Images to be downloaded using GIBS. (https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&layers=MODIS_Aqua_CorrectedReflectance_TrueColor&version=1.3.0&crs=EPSG:4326&transparent=false&width={}&height={}&bbox={}&format=image/tiff&time={})
 3.a. Variables required:
      > width = width of the image
@@ -62,11 +64,13 @@ Direct impacts of cloud streets are fairly minimal as they typically do not prec
 #### Data Description:
 
 1. Folder Structure:
+  ```
    Cloud Streets/
        |> Yes
           |> <images>
        |> No
           |> <images>
+  ```
 2. Data type: images, jpg
 
 You can download the files from: `s3://cloudstreet-datashare`. You will need an AWS account to download the data.
