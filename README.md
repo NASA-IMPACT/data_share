@@ -47,7 +47,7 @@ def modis_url(time, extent, resolution):
     return (width, height, URL.format(width, height, extent, time))
 ```
 
-You can download the files from: `s3://hls-datashare`. You will need an AWS account to download the data.
+You can download the files from: `s3://hld-datashare`. You will need an AWS account to download the data.
 
 ### Cloud Streets
 
