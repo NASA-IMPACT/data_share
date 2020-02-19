@@ -47,6 +47,8 @@ def modis_url(time, extent, resolution):
     return (width, height, URL.format(width, height, extent, time))
 ```
 
+You can find the example notebook ![here](/examples/url_generator.ipynb)
+
 You can download the files from: `s3://hld-datashare`. You will need an AWS account to download the data.
 
 ### Cloud Streets
