@@ -12,11 +12,11 @@ Dust  aerosols  in  the  atmosphere  are  known  to  modulate environmental cond
 Data Description:
 1. Labeled events are stored in a folder with the following structure:
   ```
-   high-latitude-dust_<id>:
-     |> high-latitude-dust_<id>.dbf
-     |> high-latitude-dust_<id>.prj
-     |> high-latitude-dust_<id>.shp
-     |> high-latitude-dust_<id>.shx
+   high-latitude-dust_<date>-<id>:
+     |> high-latitude-dust_<date>-<id>.dbf
+     |> high-latitude-dust_<date>-<id>.prj
+     |> high-latitude-dust_<date>-<id>.shp
+     |> high-latitude-dust_<date>-<id>.shx
   ```
 2. Images to be downloaded using GIBS. (https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&layers=MODIS_Aqua_CorrectedReflectance_TrueColor&version=1.3.0&crs=EPSG:4326&transparent=false&width={}&height={}&bbox={}&format=image/tiff&time={})
 2.a. Variables required:
