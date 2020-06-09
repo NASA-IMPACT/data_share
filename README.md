@@ -12,11 +12,11 @@ Dust  aerosols  in  the  atmosphere  are  known  to  modulate environmental cond
 Data Description:
 1. Labeled events are stored in a folder with the following structure:
   ```
-   high-latitude-dust_<id>:
-     |> high-latitude-dust_<id>.dbf
-     |> high-latitude-dust_<id>.prj
-     |> high-latitude-dust_<id>.shp
-     |> high-latitude-dust_<id>.shx
+   high-latitude-dust_<date>_<id>:
+     |> high-latitude-dust_<date>_<id>.dbf
+     |> high-latitude-dust_<date>_<id>.prj
+     |> high-latitude-dust_<date>_<id>.shp
+     |> high-latitude-dust_<date>_<id>.shx
   ```
 2. Images to be downloaded using GIBS. (https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&REQUEST=GetMap&layers=MODIS_Aqua_CorrectedReflectance_TrueColor&version=1.3.0&crs=EPSG:4326&transparent=false&width={}&height={}&bbox={}&format=image/tiff&time={})
 2.a. Variables required:
@@ -47,7 +47,7 @@ def modis_url(time, extent, resolution):
     return (width, height, URL.format(width, height, extent, time))
 ```
 
-You can find the example notebook [here](/examples/url_generator.ipynb)
+*You can find the example notebook [here](/examples/url_generator.ipynb)*
 
 You can download the files from: `s3://impact-datashare/hld`. You will need an AWS account to download the data.
 
