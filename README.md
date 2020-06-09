@@ -49,7 +49,7 @@ def modis_url(time, extent, resolution):
 
 You can find the example notebook [here](/examples/url_generator.ipynb)
 
-You can download the files from: `s3://hld-datashare`. You will need an AWS account to download the data.
+You can download the files from: `s3://impact-datashare/hld`. You will need an AWS account to download the data.
 
 ### Cloud Streets
 
@@ -74,4 +74,29 @@ Direct impacts of cloud streets are fairly minimal as they typically do not prec
   ```
 2. Data type: images, jpg
 
-You can download the files from: `s3://cloudstreet-datashare`. You will need an AWS account to download the data.
+You can download the files from: `s3://impact-datashare/cloudstreet`. You will need an AWS account to download the data.
+
+### Dust, Hurricanes, and Smoke
+
+![Dust Sample](/examples/dust.jpg)
+![Hurricane Sample](/examples/hurricane.jpg)
+![Smoke Sample](/examples/smoke.jpg)
+
+
+#### Data Description:
+
+1. Folder Structure:
+  ```
+   dust_hurricane_smoke/
+       |> dust
+          |> <images>
+       |> smoke
+          |> <images>
+       |> hurricane
+          |> <images>
+       |> others
+          |> <images>
+  ```
+2. Data type: images, jpg
+
+You can download the files from: `s3://impact-datashare/dust_hurricane_smoke`. You will need an AWS account to download the data.
