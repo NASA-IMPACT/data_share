@@ -100,3 +100,22 @@ You can download the files from: `s3://impact-datashare/cloudstreet`. You will n
 2. Data type: images, jpg
 
 You can download the files from: `s3://impact-datashare/dust_hurricane_smoke`. You will need an AWS account to download the data.
+
+### Transverse Bands
+
+![TCB Sample](/examples/dust.jpg)
+
+
+#### Data Description:
+
+1. Folder Structure:
+  ```
+   transverse_bands/
+       |> yes
+          |> <images>
+       |> no
+          |> <images>
+  ```
+2. Data type: images, jpg
+
+You can download the files from: `s3://impact-datashare/transverse_bands/`. You will need an AWS account to download the data.
