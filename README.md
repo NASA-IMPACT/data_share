@@ -103,7 +103,7 @@ You can download the files from: `s3://impact-datashare/dust_hurricane_smoke`. Y
 
 ### Transverse Bands
 
-![TCB Sample](/examples/dust.jpg)
+![TCB Sample](/examples/transverse_band.jpg)
 
 
 #### Data Description:
