@@ -7,7 +7,7 @@
 ### Tropical Cyclone
 Tropical cyclones are one of the most impactful meteorological phenomena observed on Earth. Tropical cyclones are defined as intense, synoptic scale storms, originating over warm tropical waters characterized by low pressure, high winds, and heavy precipitation. The combination of impacts from heavy wind and precipitation can cause widespread damage and flooding resulting in billions of U.S. dollars of assistance for impacted regions.
 
-![Tropical Cyclone Example]  (/examples/hurricane.jpeg)
+![Tropical Cyclone Example]  (/examples/hurricane.jpg)
 
 Data Description:
 1. 202 positive images are stored in a folder with the following structure:
@@ -15,19 +15,19 @@ Data Description:
 ### Smoke
 Smoke is a mixture of gases and particles released in response to the combustion of living or dead biomass. Anthropogenic combustion emissions (such as from power plants or from fossil fuel rig flaring) may also be considered smoke. The exact combustion of smoke is highly dependent upon the fuel, ambient atmospheric chemical composition and meteorological (or physical) conditions.
 
-![Smoke Example]  (/examples/smoke.jpeg)
+![Smoke Example]  (/examples/smoke.jpg)
 1. 256 positive images are stored in a folder with the following structure:
 
 ### Dust
 Dust is composed of fine particles of solid matter originating from Earth's surface. Sources of dust include soil, sand, volanic eruptions, and pollution among others. For dust events to be detected using satellite imagery, dry and windy conditions are typically required within the atmospheric boundary layer.
 
-![Dust Example]  (/examples/dust.jpeg)
+![Dust Example]  (/examples/dust.jpg)
 1. 200 positive images are stored in a folder with the following structure:
 
 ### Transverse Cirrus Bands
 Transverse Cirrus bands are irregularly spaced bandlike cirrus clouds that form nearly perpendiular to the axis of maximum wind speed in a jet stream. While the cause of their formation is currently unknown, transverse cirrus bands tend to be collocated with atmospheric phenomena that are known to exhibit vertical and horizontal wind shear. Thus, transverse cirrus bands can identify regions where flight-level winds may be turbulent for air travel.
 
-![Transverse Cirrus Band Example]  (/examples/tcb.jpeg)
+![Transverse Cirrus Band Example]  (/examples/transverse_band.jpg)
 1. x positive images are stored in a folder with the following structure
 
 ### High Latitude Dust
