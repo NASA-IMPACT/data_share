@@ -7,28 +7,58 @@
 ### Tropical Cyclone
 Tropical cyclones are one of the most impactful meteorological phenomena observed on Earth. Tropical cyclones are defined as intense, synoptic scale storms, originating over warm tropical waters characterized by low pressure, high winds, and heavy precipitation. The combination of impacts from heavy wind and precipitation can cause widespread damage and flooding resulting in billions of U.S. dollars of assistance for impacted regions.
 
-![Tropical Cyclone Example]  (/examples/hurricane.jpg)
-
-Data Description:
-1. 202 positive images are stored in a folder with the following structure:
+![Tropical Cyclone Example](/examples/hurricane.jpg)
 
 ### Smoke
 Smoke is a mixture of gases and particles released in response to the combustion of living or dead biomass. Anthropogenic combustion emissions (such as from power plants or from fossil fuel rig flaring) may also be considered smoke. The exact combustion of smoke is highly dependent upon the fuel, ambient atmospheric chemical composition and meteorological (or physical) conditions.
 
-![Smoke Example]  (/examples/smoke.jpg)
-1. 256 positive images are stored in a folder with the following structure:
+![Smoke Example](/examples/smoke.jpg)
 
 ### Dust
 Dust is composed of fine particles of solid matter originating from Earth's surface. Sources of dust include soil, sand, volanic eruptions, and pollution among others. For dust events to be detected using satellite imagery, dry and windy conditions are typically required within the atmospheric boundary layer.
 
-![Dust Example]  (/examples/dust.jpg)
-1. 200 positive images are stored in a folder with the following structure:
+![Dust Example](/examples/dust.jpg)
+
+### Additional Images
+The development of machine learning models requires additional data with negative images (i.e. images that do not contain the phenomena of interest) that are used for training the model. Within this data we include 334 negative images that can be used interchangably between the models as null images for training.
+
+#### Data Description:
+
+1. Folder Structure:
+  ```
+   dust_hurricane_smoke/
+       |> dust 
+          |> <images> (200 images)
+       |> smoke 
+          |> <images> (256 images)
+       |> hurricane 
+          |> <images> (202 images)
+       |> others
+          |> <images> (334 images)
+  ```
+2. Data type: images, jpg
+
+You can download the files from: `s3://impact-datashare/dust_hurricane_smoke`. You will need an AWS account to download the data.
+
 
 ### Transverse Cirrus Bands
 Transverse Cirrus bands are irregularly spaced bandlike cirrus clouds that form nearly perpendiular to the axis of maximum wind speed in a jet stream. While the cause of their formation is currently unknown, transverse cirrus bands tend to be collocated with atmospheric phenomena that are known to exhibit vertical and horizontal wind shear. Thus, transverse cirrus bands can identify regions where flight-level winds may be turbulent for air travel.
 
-![Transverse Cirrus Band Example]  (/examples/transverse_band.jpg)
-1. x positive images are stored in a folder with the following structure
+![Transverse Cirrus Band Example](/examples/transverse_band.jpg)
+
+#### Data Description:
+
+1. Folder Structure:
+  ```
+   transverse_bands/
+       |> yes
+          |> <images> (1901 images)
+       |> no
+          |> <images> (4901 images)
+  ```
+2. Data type: images, jpg
+
+You can download the files from: `s3://impact-datashare/transverse_bands/`. You will need an AWS account to download the data.
 
 ### High Latitude Dust
 Dust  aerosols  in  the  atmosphere  are  known  to  modulate environmental conditions and the climate system through direct and indirect effects between the land–atmosphere–ocean system. High latitude dust (HLD) is defined as ”particles that are lifted from a surface and travel by suspension in the atmosphere”. Typically, these dust particles are of the range of tenths of μm or larger in size. In addition,  dust events are considered high latitude when they are ≥ 50◦N and ≥ 40◦S. HLD  tends  to  occur  in  specific conditions and is seasonally dependent. HLD events can last anywhere from several hours to several days.
@@ -36,7 +66,7 @@ Dust  aerosols  in  the  atmosphere  are  known  to  modulate environmental cond
 ![High Latitude Dust Sample](/examples/hld_sample.jpg)
 
 Data Description:
-1. Labeled events are stored in a folder with the following structure:
+1. Labeled events are stored in a folder with the following structure (214 shapefiles):
   ```
    high-latitude-dust_<date>_<id>:
      |> high-latitude-dust_<date>_<id>.dbf
@@ -75,7 +105,7 @@ def modis_url(time, extent, resolution):
 
 *You can find the example notebook [here](/examples/url_generator.ipynb)*
 
-You can download the files from: `s3://hld-datashare`. You will need an AWS account to download the data.
+You can download the files from: `s3://impact-datashare/hld`. You will need an AWS account to download the data.
 
 ### Cloud Streets
 
@@ -95,7 +125,5 @@ Direct impacts of cloud streets are fairly minimal as they typically do not prec
   ```
 2. Data type: images, jpg
 
-You can download the files from: `s3://cloudstreet-datashare`. You will need an AWS account to download the data.
+You can download the files from: `s3://impact-datashare/cloudstreet`. You will need an AWS account to download the data.
 
-### Additional Images
-The development of machine learning models requires additional data with negative images (i.e. images that do not contain the phenomena of interest) that are used for training the model. Within this data we include 334 negative images that can be used interchangably between the models as null images for training.
