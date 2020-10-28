@@ -38,7 +38,7 @@ The development of machine learning models requires additional data with negativ
   ```
 2. Data type: images, jpg
 
-You can download the files from: `s3://impact-datashare/dust_hurricane_smoke`. You will need an AWS account to download the data.
+You can download the files from: `s3://impact-datashare/dust_hurricane_smoke --no-sign-request`. You will need an AWS account to download the data.
 
 
 ### Transverse Cirrus Bands
@@ -58,7 +58,7 @@ Transverse Cirrus bands are irregularly spaced bandlike cirrus clouds that form 
   ```
 2. Data type: images, jpg
 
-You can download the files from: `s3://impact-datashare/transverse_bands/`. You will need an AWS account to download the data.
+You can download the files from: `s3://impact-datashare/transverse_bands --no-sign-request/`. You will need an AWS account to download the data.
 
 ### High Latitude Dust
 Dust  aerosols  in  the  atmosphere  are  known  to  modulate environmental conditions and the climate system through direct and indirect effects between the land–atmosphere–ocean system. High latitude dust (HLD) is defined as ”particles that are lifted from a surface and travel by suspension in the atmosphere”. Typically, these dust particles are of the range of tenths of μm or larger in size. In addition,  dust events are considered high latitude when they are ≥ 50◦N and ≥ 40◦S. HLD  tends  to  occur  in  specific conditions and is seasonally dependent. HLD events can last anywhere from several hours to several days.
@@ -105,7 +105,7 @@ def modis_url(time, extent, resolution):
 
 *You can find the example notebook [here](/examples/url_generator.ipynb)*
 
-You can download the files from: `s3://impact-datashare/hld`. You will need an AWS account to download the data.
+You can download the files from: `s3://impact-datashare/hld --no-sign-request`. You will need an AWS account to download the data.
 
 ### Cloud Streets
 
@@ -125,5 +125,5 @@ Direct impacts of cloud streets are fairly minimal as they typically do not prec
   ```
 2. Data type: images, jpg
 
-You can download the files from: `s3://impact-datashare/cloudstreet`. You will need an AWS account to download the data.
+You can download the files from: `s3://impact-datashare/cloudstreet --no-sign-request`. You will need an AWS account to download the data.
 
