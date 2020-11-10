@@ -4,11 +4,6 @@
 
 ## Phenomena
 
-### Tropical Cyclone
-Tropical cyclones are one of the most impactful meteorological phenomena observed on Earth. Tropical cyclones are defined as intense, synoptic scale storms, originating over warm tropical waters characterized by low pressure, high winds, and heavy precipitation. The combination of impacts from heavy wind and precipitation can cause widespread damage and flooding resulting in billions of U.S. dollars of assistance for impacted regions.
-
-![Tropical Cyclone Example](/examples/hurricane.jpg)
-
 ### Smoke
 Smoke is a mixture of gases and particles released in response to the combustion of living or dead biomass. Anthropogenic combustion emissions (such as from power plants or from fossil fuel rig flaring) may also be considered smoke. The exact combustion of smoke is highly dependent upon the fuel, ambient atmospheric chemical composition and meteorological (or physical) conditions.
 
@@ -31,14 +26,12 @@ The development of machine learning models requires additional data with negativ
           |> <images> (200 images)
        |> smoke 
           |> <images> (256 images)
-       |> hurricane 
-          |> <images> (202 images)
        |> others
           |> <images> (334 images)
   ```
 2. Data type: images, jpg
 
-You can download the files from: `s3://impact-datashare/dust_hurricane_smoke --no-sign-request`. You will need an AWS account to download the data.
+You can download the files using: `aws s3 cp --recursive s3://impact-datashare/dust_hurricane_smoke . --no-sign-request`. 
 
 
 ### Transverse Cirrus Bands
@@ -58,7 +51,7 @@ Transverse Cirrus bands are irregularly spaced bandlike cirrus clouds that form 
   ```
 2. Data type: images, jpg
 
-You can download the files from: `s3://impact-datashare/transverse_bands --no-sign-request/`. You will need an AWS account to download the data.
+You can download the files using: `aws s3 cp --recursive s3://impact-datashare/transverse_bands . --no-sign-request/`. 
 
 ### High Latitude Dust
 Dust  aerosols  in  the  atmosphere  are  known  to  modulate environmental conditions and the climate system through direct and indirect effects between the land–atmosphere–ocean system. High latitude dust (HLD) is defined as ”particles that are lifted from a surface and travel by suspension in the atmosphere”. Typically, these dust particles are of the range of tenths of μm or larger in size. In addition,  dust events are considered high latitude when they are ≥ 50◦N and ≥ 40◦S. HLD  tends  to  occur  in  specific conditions and is seasonally dependent. HLD events can last anywhere from several hours to several days.
@@ -105,7 +98,7 @@ def modis_url(time, extent, resolution):
 
 *You can find the example notebook [here](/examples/url_generator.ipynb)*
 
-You can download the files from: `s3://impact-datashare/hld --no-sign-request`. You will need an AWS account to download the data.
+You can download the files using: `aws s3 cp --recursive s3://impact-datashare/hld . --no-sign-request`. 
 
 ### Cloud Streets
 
@@ -125,5 +118,20 @@ Direct impacts of cloud streets are fairly minimal as they typically do not prec
   ```
 2. Data type: images, jpg
 
-You can download the files from: `s3://impact-datashare/cloudstreet --no-sign-request`. You will need an AWS account to download the data.
+You can download the files using: `s3://impact-datashare/cloudstreet . --no-sign-request`. 
 
+### Tropical Cyclone
+Tropical cyclones are one of the most impactful meteorological phenomena observed on Earth. Tropical cyclones are defined as intense, synoptic scale storms, originating over warm tropical waters characterized by low pressure, high winds, and heavy precipitation. The combination of impacts from heavy wind and precipitation can cause widespread damage and flooding resulting in billions of U.S. dollars of assistance for impacted regions.
+
+![Tropical Cyclone Example](/examples/hurricane_goes.jpg)
+
+1. Folder Structure:
+  ```
+   hurricanes/
+       |> <year>
+          |> <basin>
+              |> <hurricane_code> (naming convention:  <stormid>_goes<13/16>_<YYYYMMDDTHHMMSS>_<intensity>_<lat centroid>_<lon centroid>.jpg)
+  ```
+2. Data type: images, jpg
+
+You can download the files using: `aws s3 cp --recursive s3://impact-datashare/hurricanes . --no-sign-request`. 
