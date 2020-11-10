@@ -4,36 +4,6 @@
 
 ## Phenomena
 
-### Smoke
-Smoke is a mixture of gases and particles released in response to the combustion of living or dead biomass. Anthropogenic combustion emissions (such as from power plants or from fossil fuel rig flaring) may also be considered smoke. The exact combustion of smoke is highly dependent upon the fuel, ambient atmospheric chemical composition and meteorological (or physical) conditions.
-
-![Smoke Example](/examples/smoke.jpg)
-
-### Dust
-Dust is composed of fine particles of solid matter originating from Earth's surface. Sources of dust include soil, sand, volanic eruptions, and pollution among others. For dust events to be detected using satellite imagery, dry and windy conditions are typically required within the atmospheric boundary layer.
-
-![Dust Example](/examples/dust.jpg)
-
-### Additional Images
-The development of machine learning models requires additional data with negative images (i.e. images that do not contain the phenomena of interest) that are used for training the model. Within this data we include 334 negative images that can be used interchangably between the models as null images for training.
-
-#### Data Description:
-
-1. Folder Structure:
-  ```
-   dust_hurricane_smoke/
-       |> dust 
-          |> <images> (200 images)
-       |> smoke 
-          |> <images> (256 images)
-       |> others
-          |> <images> (334 images)
-  ```
-2. Data type: images, jpg
-
-You can download the files using: `aws s3 cp --recursive s3://impact-datashare/dust_hurricane_smoke . --no-sign-request`. 
-
-
 ### Transverse Cirrus Bands
 Transverse Cirrus bands are irregularly spaced bandlike cirrus clouds that form nearly perpendiular to the axis of maximum wind speed in a jet stream. While the cause of their formation is currently unknown, transverse cirrus bands tend to be collocated with atmospheric phenomena that are known to exhibit vertical and horizontal wind shear. Thus, transverse cirrus bands can identify regions where flight-level winds may be turbulent for air travel.
 
@@ -135,3 +105,20 @@ Tropical cyclones are one of the most impactful meteorological phenomena observe
 2. Data type: images, jpg
 
 You can download the files using: `aws s3 cp --recursive s3://impact-datashare/hurricanes . --no-sign-request`. 
+
+### Smoke
+Smoke is a mixture of gases and particles released in response to the combustion of living or dead biomass. Anthropogenic combustion emissions (such as from power plants or from fossil fuel rig flaring) may also be considered smoke. The exact combustion of smoke is highly dependent upon the fuel, ambient atmospheric chemical composition and meteorological (or physical) conditions.
+
+Here the dataset is a `tif` file which contains 6 bands from GOES satellite data. You can use `rasterio` or `rio` or `gdal` or `xarray` packages to read the data.
+
+![Smoke Example](/examples/smoke_goes.png)
+
+1. Folder Structure:
+  ```
+   smoke_labeled/
+       |> time-<timestamp>-loc-<west_south_east_north>.bmp
+       |> time-<timestamp>-loc-<west_south_east_north>.tif
+  ```
+2. Data type: images, bmp, tif
+
+You can download the files using: `aws s3 cp --recursive s3://impact-datashare/smoke_labeled . --no-sign-request`. 
