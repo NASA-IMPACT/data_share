@@ -93,7 +93,7 @@ You can download the files using: `s3://impact-datashare/cloudstreet . --no-sign
 ### Tropical Cyclone
 Tropical cyclones are one of the most impactful meteorological phenomena observed on Earth. Tropical cyclones are defined as intense, synoptic scale storms, originating over warm tropical waters characterized by low pressure, high winds, and heavy precipitation. The combination of impacts from heavy wind and precipitation can cause widespread damage and flooding resulting in billions of U.S. dollars of assistance for impacted regions.
 
-![Tropical Cyclone Example](/examples/hurricane_goes.jpg)
+![Tropical Cyclone Example](/examples/hurricane_goes.png)
 
 1. Folder Structure:
   ```
